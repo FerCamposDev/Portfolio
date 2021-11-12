@@ -28,7 +28,7 @@ export function Router() {
         {/* <Route path="/sobremi" component={AboutMe} /> */}
         {/* <Route path="/*" element={<Page404/>} /> */}
       </Routes>
-      {/* < Footer /> */}
+      < Footer />
     </BrowserRouter>
   );
 }
