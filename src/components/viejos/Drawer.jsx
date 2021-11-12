@@ -25,7 +25,7 @@ import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import { useTranslation } from 'react-i18next';
 
-import SwitchIdioma from './SwitchIdioma';
+import SwitchIdioma from '../SwitchIdioma';
 
 const drawerWidth = 240;
 
