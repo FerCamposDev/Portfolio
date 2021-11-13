@@ -2,10 +2,10 @@ import { Grid, Avatar, makeStyles, Container, Typography } from '@material-ui/co
 import { useTranslation } from 'react-i18next';
 
 //IMAGENES
-import fullstack from '../images/fullstack.jpg';
-import fullstackCielo from '../images/fullstackcielo.png';
-import github from '../images/github.png';
-import linkedin from '../images/linkedin.png';
+import fullstack from '../../images/fullstack.jpg';
+import fullstackCielo from '../../images/fullstackcielo.png';
+import github from '../../images/github.png';
+import linkedin from '../../images/linkedin.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {

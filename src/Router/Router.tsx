@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Drawer from '../components/Navigation/MyDrawer'
+import Drawer from '../components/Navigation/Drawer'
 import Home from "../Pages/Home/Home";
 import Proyectos from "../Pages/Projects/Projects";
 import Resume from "../Pages/Resume/Resume";
@@ -8,7 +8,6 @@ import Footer from "../components/Footer";
 // import { AboutMe } from "../components/AboutMe";
 
 export function Router() {
-
   let lang = localStorage.getItem("lang");
   if (!lang) {
     lang = "";
@@ -24,7 +23,6 @@ export function Router() {
         <Route path="/proyectos" element={<Proyectos />} />
         <Route path="/curriculum" element={<Resume />} />
         <Route path="/contacto" element={<Contact />} />
-        
         {/* <Route path="/sobremi" component={AboutMe} /> */}
         {/* <Route path="/*" element={<Page404/>} /> */}
       </Routes>

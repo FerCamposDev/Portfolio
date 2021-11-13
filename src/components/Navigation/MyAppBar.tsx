@@ -8,6 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Divider, Grid, Hidden, Link } from '@mui/material';
 
 import { useTranslation } from 'react-i18next';
+import SwitchIdioma from '../SwitchIdioma';
 
 interface MyAppBarProps {
   open?: boolean;
@@ -71,8 +72,7 @@ export default function MyAppBar(props: MyAppBarProps) {
               }} />
 
               <Grid item>
-                {/* <SwitchIdioma /> */}
-                switch idioma
+                <SwitchIdioma />
               </Grid>
             </Grid>
           </Hidden>

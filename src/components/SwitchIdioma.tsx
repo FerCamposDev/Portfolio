@@ -17,7 +17,6 @@ const AntSwitch = withStyles((theme) => ({
     backgroundColor: theme.palette.primary.main,
     opacity: 1,
 
-
     '&$checked': {
       transform: 'translateX(12px)',
       color: theme.palette.common.white,
