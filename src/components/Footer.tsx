@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
-import  {useTranslation} from 'react-i18next';
+import useWordings from '../i18n/wordings';
 
 function Copyright() {
   return (
@@ -20,7 +20,6 @@ function Copyright() {
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    
     //backgroundColor: theme.palette.background.paper,
     backgroundColor: theme.palette.grey[300],
     marginTop: theme.spacing(2),
@@ -30,13 +29,13 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Footer() {
   const classes = useStyles();
-  const {t} = useTranslation();
-  
+  const wordings = useWordings();
+
   return (
     <footer className={classes.footer}>
       <Container maxWidth="lg">
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          {t('job')}
+          {wordings.job}
         </Typography>
         <Copyright />
       </Container>

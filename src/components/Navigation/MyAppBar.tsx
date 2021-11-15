@@ -8,8 +8,8 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Button, Grid, Hidden } from '@material-ui/core';
 
+import useWordings from '../../i18n/wordings';
 import SwitchIdioma from './SwitchIdioma';
-import { useTranslation } from 'react-i18next';
 
 const drawerWidth = 240;
 
@@ -50,7 +50,7 @@ interface Props {
 }
 
 const MyAppBar = ({ open, handleDrawerOpen }: Props) => {
-  const { t } = useTranslation();
+  const wordings = useWordings();
   const classes = useStyles();
 
   return (
@@ -73,7 +73,7 @@ const MyAppBar = ({ open, handleDrawerOpen }: Props) => {
         <Grid container>
           <Link to="/inicio" className={classes.linkButton} >
             <Button color='inherit'>
-              {t('menu.home')}
+              {wordings.menu.home}
             </Button>
           </Link>
         </Grid>
@@ -82,17 +82,17 @@ const MyAppBar = ({ open, handleDrawerOpen }: Props) => {
           <Grid container justify="flex-end" alignItems="center">
             <Link to="/curriculum" className={classes.linkButton} >
               <Button color='inherit'>
-                {t('menu.resume')}
+                {wordings.menu.resume}
               </Button>
             </Link>
             <Link to="/proyectos" className={classes.linkButton} >
               <Button color='inherit'>
-                {t('menu.projects')}
+                {wordings.menu.projects}
               </Button>
             </Link>
             <Link to="/contacto" className={classes.linkButton} >
               <Button color='inherit'>
-                {t('menu.contact')}
+                {wordings.menu.contact}
               </Button>
             </Link>
             <Divider orientation="vertical" flexItem className={classes.divider} />

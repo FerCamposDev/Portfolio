@@ -16,9 +16,9 @@ import HomeIcon from '@material-ui/icons/Home';
 import AppsIcon from '@material-ui/icons/Apps';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
-import { useTranslation } from 'react-i18next';
 import SwitchIdioma from './SwitchIdioma';
 import MyAppBar from './MyAppBar';
+import useWordings from '../../i18n/wordings';
 
 const drawerWidth = 240;
 
@@ -65,7 +65,7 @@ function ListItemLink(props: any) {
 }
 
 export default function PersistentDrawerLeft() {
-  const { t } = useTranslation();
+  const wordings = useWordings();
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -82,7 +82,7 @@ export default function PersistentDrawerLeft() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <MyAppBar open={open} handleDrawerOpen={handleDrawerOpen}/>
+      <MyAppBar open={open} handleDrawerOpen={handleDrawerOpen} />
       <Drawer
         className={classes.drawer}
         anchor="left"
@@ -104,7 +104,7 @@ export default function PersistentDrawerLeft() {
               <HomeIcon />
             </ListItemIcon>
             <ListItemText>
-              {t('menu.home')}
+              {wordings.menu.home}
             </ListItemText>
           </ListItemLink>
 
@@ -113,7 +113,7 @@ export default function PersistentDrawerLeft() {
               <AppsIcon />
             </ListItemIcon>
             <ListItemText>
-              {t('menu.projects')}
+              {wordings.menu.projects}
             </ListItemText>
           </ListItemLink>
 
@@ -122,7 +122,7 @@ export default function PersistentDrawerLeft() {
               <MenuBookIcon />
             </ListItemIcon>
             <ListItemText>
-              {t('menu.resume')}
+              {wordings.menu.resume}
             </ListItemText>
           </ListItemLink>
 
@@ -131,7 +131,7 @@ export default function PersistentDrawerLeft() {
               <ContactMailIcon />
             </ListItemIcon>
             <ListItemText>
-              {t('menu.contact')}
+              {wordings.menu.contact}
             </ListItemText>
           </ListItemLink>
         </List>

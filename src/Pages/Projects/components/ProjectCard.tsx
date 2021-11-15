@@ -7,7 +7,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-import { useTranslation } from 'react-i18next';
+import useWordings from '../../../i18n/wordings';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,7 +32,7 @@ interface ProjectCardProps {
 export default function ProjectCard(props: ProjectCardProps) {
   const { image, title, description, git, demo } = props;
   const classes = useStyles();
-  const { t } = useTranslation();
+  const wordings = useWordings();
 
   return (
     <Card className={classes.root}>
@@ -61,7 +61,7 @@ export default function ProjectCard(props: ProjectCardProps) {
         </a>
         <a href={demo} target="_blank" style={{ textDecoration: 'none' }} rel="noreferrer">
           <Button color='primary' variant='contained'>
-            {t('card.demo')}
+            {wordings.card.demo}
           </Button>
         </a>
       </CardActions>

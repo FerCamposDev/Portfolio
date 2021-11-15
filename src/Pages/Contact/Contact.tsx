@@ -4,11 +4,10 @@ import CallIcon from '@material-ui/icons/Call';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import MailIcon from '@material-ui/icons/Mail';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
-
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 
-import { useTranslation } from 'react-i18next';
+import useWordings from '../../i18n/wordings';
 import perfil from '../../images/fer-campos.png';
 
 function Alert(props: any) {
@@ -43,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Contact = () => {
   const classes = useStyles();
-  const { t } = useTranslation();
+  const wordings = useWordings();
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
@@ -85,11 +84,11 @@ const Contact = () => {
         </Grid>
         <Grid item sm={6} xs={12} direction="column" alignItems="center">
           <Typography variant="h3" style={{ paddingLeft: '30px' }}>
-            {t("contact.title")}
+            {wordings.contact.title}
             <Divider className={classes.divider} />
           </Typography>
           <Grid container item alignItems="center" className={classes.marginTop}>
-            <Tooltip title={t("contact.call") || ''}>
+            <Tooltip title={wordings.contact.call || ''}>
               <Link
                 component={Button}
                 color="inherit"
@@ -110,7 +109,7 @@ const Contact = () => {
             </Tooltip>
           </Grid>
           <Grid container item alignItems="center" className={classes.marginTop}>
-            <Tooltip title={t("contact.whatsapp") || ''}>
+            <Tooltip title={wordings.contact.whatsapp || ''}>
               <Link
                 component={Button}
                 color="inherit"
@@ -131,7 +130,7 @@ const Contact = () => {
             </Tooltip>
           </Grid>
           <Grid container item alignItems="center" className={classes.marginTop}>
-            <Tooltip title={t("contact.email") || ''}>
+            <Tooltip title={wordings.contact.email || ''}>
               <Link
                 component={Button}
                 color="inherit"
@@ -149,7 +148,7 @@ const Contact = () => {
       </Grid>
       <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
         <Alert icon={<FileCopyIcon fontSize="inherit" />} onClose={handleClose} severity="info">
-          {t("contact.email-copied")}
+          {wordings.contact.emailCopied}
         </Alert>
       </Snackbar>
     </Container>

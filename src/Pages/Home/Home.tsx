@@ -1,5 +1,5 @@
 import { Grid, Avatar, makeStyles, Container, Typography } from '@material-ui/core'
-import { useTranslation } from 'react-i18next';
+import useWordings from '../../i18n/wordings';
 
 //IMAGENES
 import fullstack from '../../images/fullstack.jpg';
@@ -86,14 +86,14 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = () => {
   const classes = useStyles();
-  const { t } = useTranslation();
+  const wordings = useWordings();
 
   return (
     <Container className={classes.root}>
       <Grid justify="center" className={classes.resumeRightCol}>
         <Grid container item xs={12} justify="center" alignContent="flex-start">
           <Typography variant="h2" className={classes.job}>
-            <b>{t('job')}</b>
+            <b>{wordings.job}</b>
           </Typography>
 
           <Grid item xs={12} justify="center">

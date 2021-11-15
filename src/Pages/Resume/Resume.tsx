@@ -1,10 +1,9 @@
 import { Grid, Avatar, makeStyles, Divider, Typography, Button } from '@material-ui/core'
 import Tecnology from './components/Tecnology';
 import Paper from '@material-ui/core/Paper';
-import { useTranslation } from 'react-i18next';
 
-//imagenes
 import perfil from '../../images/fer-campos.png';
+import useWordings from '../../i18n/wordings';
 
 const useStyles = makeStyles((theme) => ({
   foto: {
@@ -19,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   gridDerecho: {
-    // background: '#27221F',
     background: theme.palette.text.primary,
     color: 'white',
     padding: '2em',
@@ -54,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Resume = () => {
-  const { t } = useTranslation();
+  const wordings = useWordings();
   const classes = useStyles();
   return (
     <Paper className={classes.paper} elevation={5}>
@@ -78,21 +76,21 @@ const Resume = () => {
           >
             <Divider className={classes.divider} />
             <Typography variant="h4" className={classes.marginTopCenter}>
-              {t("job")}
+              {wordings.job}
             </Typography>
             <p>
-              {t('resume.profile')}
+              {wordings.resume.profile}
             </p>
             <Divider className={classes.divider} />
             <Typography variant="h6" className={classes.marginTopCenter}>
-              {t('resume.location')}
+              {wordings.resume.location}
             </Typography>
             <p style={{ textAlign: "center" }}>González Catán, La Matanza, Bs As, Argentina.</p>
             <Typography variant="h6" className={classes.marginTop}>
-              {t('resume.contact')}
+              {wordings.resume.contact}
             </Typography>
-            <p><b>{t('resume.phone')}: </b> +54 11-6707-0753<br></br>
-              <b>{t('resume.email')}: </b> fer_eze_jose @hotmail.com</p>
+            <p><b>{wordings.resume.phone}: </b> +54 11-6707-0753<br></br>
+              <b>{wordings.resume.email}: </b> fer_eze_jose @hotmail.com</p>
             <Divider className={classes.divider} />
           </Grid>
           {/* <Grid container item xs={12}
@@ -104,7 +102,7 @@ const Resume = () => {
             > */}
           <Grid item xs={12}>
             <Typography variant="h6" className={classes.marginTopCenter}>
-              {t('resume.tecnologies')}
+              {wordings.resume.tecnologies}
             </Typography>
             <Tecnology name={"Javascript"} level={94} />
             <Tecnology name={"Java"} level={60} />
@@ -124,14 +122,14 @@ const Resume = () => {
         <Grid item xs={12} sm={8} className={classes.gridDerecho}
           direction="column"
         >
-          <Typography variant="h4" color="initial">{t('resume.education')}</Typography>
+          <Typography variant="h4" color="initial">{wordings.resume.education}</Typography>
           <Grid container direction="row" alignItems="center" >
             <Grid sm={4} xs={12}>
-              <p>01-03-2017 - {t('resume.present')}</p>
+              <p>01-03-2017 - {wordings.resume.present}</p>
             </Grid>
             <Grid sm={8} xs={12}>
               <h2 className="fs-2">Universidad Nacional de La Matanza</h2>
-              <p>{t('resume.degree')}</p>
+              <p>{wordings.resume.degree}</p>
               <Divider className={classes.dividerCorto} />
             </Grid>
             <Grid sm={4} xs={12}>
@@ -139,27 +137,27 @@ const Resume = () => {
             </Grid>
             <Grid sm={8} xs={12}>
               <h2 className="fs-2">Instituto González Catán</h2>
-              <p>{t('resume.secondary')}</p>
+              <p>{wordings.resume.secondary}</p>
             </Grid>
           </Grid>
           <Divider className={classes.divider} />
-          <Typography variant="h4" color="initial" className={classes.marginTop}>{t('resume.work')}</Typography>
+          <Typography variant="h4" color="initial" className={classes.marginTop}>{wordings.resume.work}</Typography>
           <Grid container direction="row" alignItems="center" >
             <Grid sm={4} xs={12}>
-              <p>01-06-2020 - {t('resume.present')}</p>
+              <p>01-06-2020 - {wordings.resume.present}</p>
             </Grid>
             <Grid sm={8} xs={12}>
-              <h2 className="fs-2">{t('resume.epi-dev')}</h2>
-              <p>{t('resume.epi-dev-desc')}</p>
+              <h2 className="fs-2">{wordings.resume.epiDev}</h2>
+              <p>{wordings.resume.epiDevDesc}</p>
               <Divider className={classes.dividerCorto} />
             </Grid>
             <Grid sm={4} xs={12}>
               <p>02-03-2020 - 01-06-2020</p>
             </Grid>
             <Grid sm={8} xs={12}>
-              <h2 className="fs-2">{t('resume.epi-infra')}</h2>
+              <h2 className="fs-2">{wordings.resume.epiInfra}</h2>
               <p className={`fs-1`}>
-                {t('resume.epi-infra-desc')}
+                {wordings.resume.epiInfraDesc}
               </p>
               <Divider className={classes.dividerCorto} />
             </Grid>
@@ -167,9 +165,9 @@ const Resume = () => {
               <p>2013 a 2016 y 2019-2020</p>
             </Grid>
             <Grid sm={8} xs={12}>
-              <h2 className="fs-2">{t('resume.el-progreso')}</h2>
+              <h2 className="fs-2">{wordings.resume.elProgreso}</h2>
               <p className={`fs-1`}>
-                {t('resume.el-progreso-desc')}
+                {wordings.resume.elProgresoDesc}
               </p>
               <Divider className={classes.dividerCorto} />
             </Grid>
@@ -177,30 +175,29 @@ const Resume = () => {
               <p>2016 - 2019</p>
             </Grid>
             <Grid sm={8} xs={12}>
-              <h2 className="fs-2">{t('resume.blancos-line')}</h2>
+              <h2 className="fs-2">{wordings.resume.blancosLine}</h2>
               <p className={`fs-1`}>
-                {t('resume.blancos-line-desc')}
+                {wordings.resume.blancosLineDesc}
               </p>
-              {/* <Divider className={classes.dividerCorto}/> */}
             </Grid>
           </Grid>
           <Divider className={classes.divider} />
-          <Typography variant="h4" color="initial" className={classes.marginTop}>{t('resume.knowledge')}</Typography>
+          <Typography variant="h4" color="initial" className={classes.marginTop}>{wordings.resume.knowledge}</Typography>
           <Grid container direction="row" alignItems="center" >
             <Grid sm={12} xs={12} className={classes.p}>
-              <p><u><b>{t('resume.english')}.</b></u> {t('resume.english-desc')}</p>
-              <p><u><b>{t('resume.spanish')}.</b></u> {t('resume.spanish-desc')}</p>
-              <p><u><b>{t('resume.microsoft-office')}.</b></u> {t('resume.microsoft-office-desc')}</p>
-              <p><u><b>{t('resume.oratory')}: </b></u> {t('resume.oratory-desc')}</p>
-              <p><u><b>{t('resume.mp')}: </b></u> {t('resume.mp-desc')}</p>
+              <p><u><b>{wordings.resume.english}.</b></u> {wordings.resume.englishDesc}</p>
+              <p><u><b>{wordings.resume.spanish}.</b></u> {wordings.resume.spanishDesc}</p>
+              <p><u><b>{wordings.resume.microsoftOffice}.</b></u> {wordings.resume.microsoftOfficeDesc}</p>
+              <p><u><b>{wordings.resume.oratory}: </b></u> {wordings.resume.oratoryDesc}</p>
+              <p><u><b>{wordings.resume.mp}: </b></u> {wordings.resume.mpDesc}</p>
             </Grid>
           </Grid>
           <Divider className={classes.divider} />
         </Grid>
         <Grid item container justify="center" className={classes.descarga}>
-          <a style={{ textDecoration: "none" }} href={t('resume.resume-link')} download="CV.pdf">
+          <a style={{ textDecoration: "none" }} href={wordings.resume.resumeLink} download="CV.pdf">
             <Button variant="contained" color="primary">
-              {t('resume.download')}
+              {wordings.resume.download}
             </Button>
           </a>
         </Grid>
