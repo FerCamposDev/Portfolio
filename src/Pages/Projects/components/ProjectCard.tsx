@@ -54,12 +54,12 @@ export default function ProjectCard(props: ProjectCardProps) {
         </CardContent>
       </CardActionArea>
       <CardActions className={classes.links}>
-        <a href={git} target="_blank" style={{ textDecoration: 'none' }}>
+        <a href={git} target="_blank" style={{ textDecoration: 'none' }} rel="noreferrer">
           <Button color='primary' variant='contained'>
             GitHub
           </Button>
         </a>
-        <a href={demo} target="_blank" style={{ textDecoration: 'none' }}>
+        <a href={demo} target="_blank" style={{ textDecoration: 'none' }} rel="noreferrer">
           <Button color='primary' variant='contained'>
             {t('card.demo')}
           </Button>

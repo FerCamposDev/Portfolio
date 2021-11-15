@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Switch from '@material-ui/core/Switch';
 import Grid from '@material-ui/core/Grid';
@@ -12,7 +12,6 @@ const AntSwitch = withStyles((theme) => ({
   },
   switchBase: {
     padding: 2,
-    //        color: theme.palette.grey[500],
     color: theme.palette.common.white,
     backgroundColor: theme.palette.primary.main,
     opacity: 1,
@@ -37,17 +36,16 @@ const AntSwitch = withStyles((theme) => ({
     border: `1px solid ${theme.palette.grey[500]}`,
     borderRadius: 16 / 2,
     opacity: 1,
-    //backgroundColor: theme.palette.common.white,
     backgroundColor: theme.palette.primary.main,
   },
   checked: {},
 }))(Switch);
 
 export default function SwitchIdioma() {
-  const [ingles, setIngles] = React.useState(true);
+  const [ingles, setIngles] = useState(true);
 
   useEffect(() => {
-    const userLang = navigator.language /*|| navigator.userLanguage;*/
+    const userLang = navigator.language;
     let defaultLocale = userLang.substring(0, 2);
 
     let langSave = localStorage.getItem("lang");
@@ -55,22 +53,21 @@ export default function SwitchIdioma() {
       defaultLocale = langSave;
     }
 
-    switch (defaultLocale) {
-      case "es": setIngles(false); break;
-      case "en": setIngles(true); break;
-    }
-    console.log(ingles)
-  }, [])
+    if (defaultLocale === 'es')
+      setIngles(false);
+    else
+      setIngles(true);
+  }, []);
 
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIngles(event.target.checked);
     if (event.target.checked) {
       localStorage.setItem("lang", "en");
-      window.location.href = window.location.href.replace('/es', '/en')
+      window.location.href = window.location.href.replace('/es/', '/en/')
     } else {
       localStorage.setItem("lang", "es");
-      window.location.href = window.location.href.replace('/en', '/es')
+      window.location.href = window.location.href.replace('/en/', '/es/')
     }
   };
 
@@ -78,7 +75,7 @@ export default function SwitchIdioma() {
     <Grid component="label" container justify="center" alignItems="center" spacing={1}>
       <Grid item>Español</Grid>
       <Grid item>
-        <AntSwitch checked={ingles} onChange={handleChange} name="checkedC" />
+        <AntSwitch checked={ingles} onChange={handleChange} />
       </Grid>
       <Grid item>English</Grid>
     </Grid>
