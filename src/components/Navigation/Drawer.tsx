@@ -1,6 +1,7 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
+import { useTheme } from '@material-ui/core/styles';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
@@ -11,63 +12,21 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-
 import HomeIcon from '@material-ui/icons/Home';
 import AppsIcon from '@material-ui/icons/Apps';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
-import LanguageSwitch from './LanguageSwitch';
-import MyAppBar from './MyAppBar';
+
 import useWordings from '../../i18n/wordings';
-
-const drawerWidth = 240;
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    backgroundColor: "#ABE9F4",
-  },
-  drawer: {
-    width: drawerWidth,
-    flexShrink: 0,
-  },
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  drawerHeader: {
-    display: 'flex',
-    alignItems: 'center',
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-    justifyContent: 'flex-end',
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(1),
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: -drawerWidth,
-  },
-  contentShift: {
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-    marginLeft: 0,
-  },
-}));
-
-function ListItemLink(props: any) {
-  return <ListItem button component="a" {...props} />;
-}
+import useDrawerStyles from './drawerStyles';
+import MyAppBar from './MyAppBar';
+import LanguageSwitch from './LanguageSwitch';
 
 export default function PersistentDrawerLeft() {
   const wordings = useWordings();
-  const classes = useStyles();
+  const classes = useDrawerStyles();
   const theme = useTheme();
+  const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
   let lang = "/" + localStorage.getItem("lang") || "";
 
@@ -99,41 +58,41 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-          <ListItemLink href={lang + "/home"}>
+          <ListItem button onClick={() => navigate("/home")}>
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
             <ListItemText>
               {wordings.menu.home}
             </ListItemText>
-          </ListItemLink>
+          </ListItem>
 
-          <ListItemLink href={lang + "/projects"}>
+          <ListItem button onClick={() => navigate("/projects")}>
             <ListItemIcon>
               <AppsIcon />
             </ListItemIcon>
             <ListItemText>
               {wordings.menu.projects}
             </ListItemText>
-          </ListItemLink>
+          </ListItem>
 
-          <ListItemLink href={lang + "/resume"}>
+          <ListItem button onClick={() => navigate("/resume")}>
             <ListItemIcon>
               <MenuBookIcon />
             </ListItemIcon>
             <ListItemText>
               {wordings.menu.resume}
             </ListItemText>
-          </ListItemLink>
+          </ListItem>
 
-          <ListItemLink href={lang + "/contact"}>
+          <ListItem button onClick={() => navigate("/contact")}>
             <ListItemIcon>
               <ContactMailIcon />
             </ListItemIcon>
             <ListItemText>
               {wordings.menu.contact}
             </ListItemText>
-          </ListItemLink>
+          </ListItem>
         </List>
         <Divider />
         <List >
