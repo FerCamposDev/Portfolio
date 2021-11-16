@@ -2,8 +2,7 @@ import { makeStyles } from "@material-ui/core";
 
 const useProjectsStyles = makeStyles((theme) => ({
   paper: {
-    marginLeft: theme.spacing(2),
-    marginRight: theme.spacing(2),
+    margin: theme.spacing(2),
     padding: theme.spacing(2),
   },
   // ProjectList
@@ -16,8 +15,6 @@ const useProjectsStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-around',
   },
-  // ProjectCard
-  
 }));
 
 export default useProjectsStyles;

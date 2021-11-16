@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { Grid, Avatar, makeStyles, Container, Divider, Typography, Hidden, Button, Tooltip, Link } from '@material-ui/core'
+import {
+  Grid, Avatar, Container, Divider, Typography, Hidden, Button, Tooltip, Link
+} from '@material-ui/core'
 import CallIcon from '@material-ui/icons/Call';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import MailIcon from '@material-ui/icons/Mail';
@@ -8,53 +10,43 @@ import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 
 import useWordings from '../../i18n/wordings';
+import useContactStyles from './contactStyles';
 import perfil from '../../images/fer-campos.png';
 
 function Alert(props: any) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-const useStyles = makeStyles((theme) => ({
-  large: {
-    width: theme.spacing(30),
-    height: theme.spacing(30),
-    marginTop: '10px',
-    borderRadius: '30px'
-  },
-  marginTop: {
-    paddingTop: '20px',
-  },
-  resumeRightCol: {
-    background: '#27221F',
-    //background: theme.palette.text.primary,
-    //background: 'black',
-    color: 'white',
-    padding: '2em',
-    //marginTop: '20px',
-    borderRadius: '20px',
-  },
-  divider: {
-    borderTop: '3px solid',
-    borderTopColor: theme.palette.primary.dark,
-    width: '45%'
-  }
-}));
-
 const Contact = () => {
-  const classes = useStyles();
+  const classes = useContactStyles();
   const wordings = useWordings();
   const [open, setOpen] = useState(false);
 
-  const handleClick = () => {
-    let aux = document.createElement("input");
-    aux.setAttribute("value", "fer_eze_jose@hotmail.com");
-    document.body.appendChild(aux);
-    aux.select();
-    document.execCommand("copy");
-    document.body.removeChild(aux);
-
-    setOpen(true);
+  const handleCopy = () => {
+    const clipboard = navigator.clipboard;
+    if (clipboard) {
+      navigator.clipboard.writeText('fer_eze_jose@hotmail.com')
+        .then(() => setOpen(true))
+        .catch((err) => console.log(err));
+    } else {
+      let aux = document.createElement("input");
+      aux.setAttribute("value", "fer_eze_jose@hotmail.com");
+      document.body.appendChild(aux);
+      aux.select();
+      document.execCommand("copy");
+      document.body.removeChild(aux);
+      setOpen(true)
+    }
   };
+
+  const handleClick = (to: string) => {
+    let a = document.createElement("a");
+    a.href = to;
+    a.target = "_blank";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
 
   const handleClose = (event: React.SyntheticEvent | MouseEvent, reason?: string) => {
     if (reason === 'clickaway') {
@@ -64,90 +56,58 @@ const Contact = () => {
   };
 
   return (
-    <Container style={{ marginTop: '20px' }} className={classes.resumeRightCol}>
-      <Grid container direction="row" className={classes.resumeRightCol} justify="center">
+    <Container style={{ marginTop: '20px' }} className={classes.main}>
+      <Grid container direction="row" className={classes.main} justify="center">
         <Grid container item sm={6} xs={12} direction="column" alignItems="center">
           <Hidden xsDown>
-            <Avatar
-              alt="Foto Perfil"
+            <Avatar alt="Photo" variant="rounded"
               src={perfil}
-              className={classes.large}
-              variant="rounded"
+              className={classes.photo}
             />
-
-            <Typography variant="h4">
-              Fernando Campos
-            </Typography>
-
+            <Typography variant="h3">Fernando Campos</Typography>
           </Hidden>
-
         </Grid>
         <Grid item sm={6} xs={12} direction="column" alignItems="center">
           <Typography variant="h3" style={{ paddingLeft: '30px' }}>
             {wordings.contact.title}
             <Divider className={classes.divider} />
           </Typography>
-          <Grid container item alignItems="center" className={classes.marginTop}>
-            <Tooltip title={wordings.contact.call || ''}>
-              <Link
-                component={Button}
-                color="inherit"
-                onClick={() => {
-                  let a = document.createElement("a");
-                  a.href = "tel:+541167070753";
-                  a.target = "_blank";
-                  document.body.appendChild(a);
-                  a.click();
-                  document.body.removeChild(a);
-                }}
+          <Grid container alignItems="center" className={classes.marginTop}>
+            <Tooltip title={wordings.contact.call} style={{ color: 'white' }}>
+              <Link component={Button}
+                onClick={() => handleClick('tel:+541167070753')}
               >
-                <CallIcon fontSize="large"></CallIcon>
-                <Typography variant="h4">
-                  1167070753
-                </Typography>
+                <CallIcon fontSize="large" />
+                <Typography variant="h4">1167070753</Typography>
               </Link>
             </Tooltip>
           </Grid>
-          <Grid container item alignItems="center" className={classes.marginTop}>
-            <Tooltip title={wordings.contact.whatsapp || ''}>
-              <Link
-                component={Button}
-                color="inherit"
-                onClick={() => {
-                  let a = document.createElement("a");
-                  a.href = "https://wa.me/541167070753?text=Hola%20Fernando%20ví%20tu%20portafolio.";
-                  a.target = "_blank";
-                  document.body.appendChild(a);
-                  a.click();
-                  document.body.removeChild(a);
-                }}
+          <Grid container alignItems="center" className={classes.marginTop}>
+            <Tooltip title={wordings.contact.whatsapp} style={{ color: 'white' }}>
+              <Link component={Button}
+                onClick={() =>
+                  handleClick("https://wa.me/541167070753?text=Hola%20Fernando%20ví%20tu%20portafolio.")
+                }
               >
-                <WhatsAppIcon fontSize="large"></WhatsAppIcon>
-                <Typography variant="h4">
-                  1167070753
-                </Typography>
+                <WhatsAppIcon fontSize="large" />
+                <Typography variant="h4">1167070753</Typography>
               </Link>
             </Tooltip>
           </Grid>
-          <Grid container item alignItems="center" className={classes.marginTop}>
-            <Tooltip title={wordings.contact.email || ''}>
-              <Link
-                component={Button}
-                color="inherit"
-                onClick={handleClick}
-              >
-                <MailIcon fontSize="large"></MailIcon>
+          <Grid container alignItems="center" className={classes.marginTop}>
+            <Tooltip title={wordings.contact.email} style={{ color: 'white' }}>
+              <Link component={Button} onClick={handleCopy} >
+                <MailIcon fontSize="large" />
                 <Typography variant="h6">
-                  fer_eze_jose@hotmail.com
+                  &nbsp;fer_eze_jose@hotmail.com
                 </Typography>
               </Link>
             </Tooltip>
-
           </Grid>
         </Grid>
       </Grid>
       <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
-        <Alert icon={<FileCopyIcon fontSize="inherit" />} onClose={handleClose} severity="info">
+        <Alert icon={<FileCopyIcon />} onClose={handleClose} severity="info">
           {wordings.contact.emailCopied}
         </Alert>
       </Snackbar>
