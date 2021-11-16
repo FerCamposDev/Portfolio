@@ -1,8 +1,7 @@
-
 import { makeStyles } from '@material-ui/core';
 
 import fullstack from '../../images/fullstack.jpg';
-import fullstackCielo from '../../images/fullstackcielo.png';
+import fullstackSky from '../../images/fullstack-sky.png';
 
 const useHomeStyles = makeStyles((theme) => ({
   root: {
@@ -38,7 +37,7 @@ const useHomeStyles = makeStyles((theme) => ({
     padding: '1em',
 
     [theme.breakpoints.down('sm')]: {
-      backgroundImage: 'url(' + fullstackCielo + ')',
+      backgroundImage: 'url(' + fullstackSky + ')',
       backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
       backgroundColor: "#ABE9F4",

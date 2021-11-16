@@ -4,12 +4,12 @@ import useWordings from '../../i18n/wordings';
 import useProjectsStyles from './projectsStyles';
 import ProjectList from './components/ProjectList';
 
-import screenNotas from '../../images/projects/notas.png';
+import screenNotes from '../../images/projects/notes.png';
 import screenChat from '../../images/projects/chat.png';
 import screenCheckout from '../../images/projects/checkout.png'
 import screenAPIWhatsapp from '../../images/projects/api-whatsapp.png'
 import screenPortfolio from '../../images/projects/portfolio.png'
-import enConstruccion from '../../images/projects/construccion.png'
+import inConstruction from '../../images/projects/construction.png'
 
 const Projects = () => {
   const classes = useProjectsStyles();
@@ -20,7 +20,7 @@ const Projects = () => {
       description: wordings.projects.notesDesc,
       git: 'https://github.com/FerCampos95/notas',
       demo: 'https://fercampos95.github.io/notas',
-      image: screenNotas,
+      image: screenNotes,
     },
   ]
 
@@ -61,7 +61,7 @@ const Projects = () => {
       description: wordings.projects.dailyappDesc,
       git: '',
       demo: '',
-      image: enConstruccion,
+      image: inConstruction,
     },
   ]
 

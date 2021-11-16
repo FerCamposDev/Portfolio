@@ -39,7 +39,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Proyecto"
+          alt={`Project-${title}`}
           height="180"
           image={image}
           title={title}

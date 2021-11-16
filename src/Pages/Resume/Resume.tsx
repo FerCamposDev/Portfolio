@@ -3,10 +3,10 @@ import Paper from '@material-ui/core/Paper';
 
 import useWordings from '../../i18n/wordings';
 import useResumeStyles from './resumeStyles';
-import Tecnology from './components/Tecnology';
+import Technology from './components/Technology';
 import TimeAndData from './components/TimeAndData';
 
-import perfil from '../../images/fer-campos.png';
+import profile from '../../images/fer-campos.png';
 
 const Resume = () => {
   const wordings = useWordings();
@@ -18,7 +18,7 @@ const Resume = () => {
           <Grid container item xs={12} justify="center" direction="column" alignItems="center">
             <Avatar
               alt="photo"
-              src={perfil}
+              src={profile}
               className={classes.photo}
             />
             <Typography variant="h3" className={classes.marginTopCenter}>
@@ -52,19 +52,19 @@ const Resume = () => {
           </Grid>
           <Grid item xs={12}>
             <Typography variant="h6" className={classes.marginTopCenter}>
-              {wordings.resume.tecnologies}
+              {wordings.resume.technologies}
             </Typography>
-            <Tecnology name={"Javascript"} level={94} />
-            <Tecnology name={"Typescript"} level={80} />
-            <Tecnology name={"Java"} level={60} />
-            <Tecnology name={"HTML/CSS"} level={75} />
-            <Tecnology name={"React"} level={70} />
-            <Tecnology name={"Node"} level={75} />
-            <Tecnology name={"Firebase"} level={70} />
-            <Tecnology name={"SQL"} level={35} />
-            <Tecnology name={"Docker"} level={66} />
-            <Tecnology name={"Azure"} level={70} />
-            <Tecnology name={"C"} level={80} />
+            <Technology name={"Javascript"} level={94} />
+            <Technology name={"Typescript"} level={80} />
+            <Technology name={"Java"} level={60} />
+            <Technology name={"HTML/CSS"} level={75} />
+            <Technology name={"React"} level={70} />
+            <Technology name={"Node"} level={75} />
+            <Technology name={"Firebase"} level={70} />
+            <Technology name={"SQL"} level={35} />
+            <Technology name={"Docker"} level={66} />
+            <Technology name={"Azure"} level={70} />
+            <Technology name={"C"} level={80} />
           </Grid>
         </Grid>
 

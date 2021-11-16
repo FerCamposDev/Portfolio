@@ -21,7 +21,7 @@ export const enTranslations = {
     "contact": "Contact",
     "phone": "Phone",
     "email": "Email",
-    "tecnologies": "Tecnologies",
+    "technologies": "Technologies",
     "present": "Present",
     "education": "Education",
     "degree": "Computer Engineering.",

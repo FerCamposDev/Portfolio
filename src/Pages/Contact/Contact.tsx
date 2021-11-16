@@ -11,7 +11,7 @@ import MuiAlert from '@material-ui/lab/Alert';
 
 import useWordings from '../../i18n/wordings';
 import useContactStyles from './contactStyles';
-import perfil from '../../images/fer-campos.png';
+import profile from '../../images/fer-campos.png';
 
 function Alert(props: any) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -61,7 +61,7 @@ const Contact = () => {
         <Grid container item sm={6} xs={12} direction="column" alignItems="center">
           <Hidden xsDown>
             <Avatar alt="Photo" variant="rounded"
-              src={perfil}
+              src={profile}
               className={classes.photo}
             />
             <Typography variant="h3">Fernando Campos</Typography>

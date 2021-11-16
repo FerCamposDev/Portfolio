@@ -27,7 +27,7 @@ const Home = () => {
         <Grid item className={classes.socialLinks} >
           <a href="https://www.linkedin.com/in/fercampos/" rel="noopener noreferrer" target="_blank">
             <Avatar
-              alt="LinkedIn Icono"
+              alt="LinkedIn Icon"
               src={linkedin}
               className={classes.image}
               variant="rounded"
@@ -43,7 +43,7 @@ const Home = () => {
 
           <a href="https://github.com/fercampos95" rel="noopener noreferrer" target="_blank">
             <Avatar
-              alt="Github Icono"
+              alt="Github Icon"
               src={github}
               className={classes.image}
               variant="rounded"

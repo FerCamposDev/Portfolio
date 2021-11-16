@@ -20,14 +20,14 @@ const ProjectList = (props: Props) => {
       </Grid>
       <Grid container xs={12} className={classes.cards}>
         {
-          projects.map(proyecto => {
+          projects.map(project => {
             return (
               <ProjectCard
-                image={proyecto.image}
-                title={proyecto.title}
-                description={proyecto.description}
-                git={proyecto.git}
-                demo={proyecto.demo}
+                image={project.image}
+                title={project.title}
+                description={project.description}
+                git={project.git}
+                demo={project.demo}
               />
             )
           })

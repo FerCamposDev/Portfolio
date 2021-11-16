@@ -25,7 +25,7 @@ const useWordings = () => {
       contact: t("resume.contact"),
       phone: t("resume.phone"),
       email: t("resume.email"),
-      tecnologies: t("resume.tecnologies"),
+      technologies: t("resume.technologies"),
       present: t("resume.present"),
       education: t("resume.education"),
       degree: t("resume.degree"),
@@ -34,9 +34,7 @@ const useWordings = () => {
       epiDev: t("resume.epi-dev"),
       epiDevDesc: t("resume.epi-dev-desc"),
       epiInfra: t("resume.epi-infra"),
-      epiInfraDesc: `My job was to carry out the migration of all web services hosted on AWS to Azure, reducing the cost of the company in that sector by 100% for a year and a half due to the fact that they had a Microsoft sponsorship that they did not use.
-  We migrated the Redmine, CRM, SitioWeb (Wordpress) and Jenkins / SonarQube servers.
-  We also migrated the wordpress website from the .com domain to the .net together with the business email.`,
+      epiInfraDesc: t("resume.epi-infra-desc"),
       elProgreso: t("resume.el-progreso"),
       elProgresoDesc: t("resume.el-progreso-desc"),
       blancosLine: t("resume.blancos-line"),
