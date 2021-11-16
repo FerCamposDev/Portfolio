@@ -18,7 +18,7 @@ const Home = () => {
           </Typography>
 
           <Grid item xs={12} justify="center">
-            <Typography variant="h5" className={classes.knowledges}>
+            <Typography variant="h5" className={classes.knowledge}>
               <b>HTML/CSS | Bootstrap | Material-ui | JavaScript | Typescript | React | NodeJS | Express | Firebase | Azure | Docker</b>
             </Typography>
           </Grid>

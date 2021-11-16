@@ -16,7 +16,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import AppsIcon from '@material-ui/icons/Apps';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
-import SwitchIdioma from './SwitchIdioma';
+import LanguageSwitch from './LanguageSwitch';
 import MyAppBar from './MyAppBar';
 import useWordings from '../../i18n/wordings';
 
@@ -99,7 +99,7 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-          <ListItemLink href={lang + "/inicio"}>
+          <ListItemLink href={lang + "/home"}>
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
@@ -108,7 +108,7 @@ export default function PersistentDrawerLeft() {
             </ListItemText>
           </ListItemLink>
 
-          <ListItemLink href={lang + "/proyectos"}>
+          <ListItemLink href={lang + "/projects"}>
             <ListItemIcon>
               <AppsIcon />
             </ListItemIcon>
@@ -117,7 +117,7 @@ export default function PersistentDrawerLeft() {
             </ListItemText>
           </ListItemLink>
 
-          <ListItemLink href={lang + "/curriculum"}>
+          <ListItemLink href={lang + "/resume"}>
             <ListItemIcon>
               <MenuBookIcon />
             </ListItemIcon>
@@ -126,7 +126,7 @@ export default function PersistentDrawerLeft() {
             </ListItemText>
           </ListItemLink>
 
-          <ListItemLink href={lang + "/contacto"}>
+          <ListItemLink href={lang + "/contact"}>
             <ListItemIcon>
               <ContactMailIcon />
             </ListItemIcon>
@@ -138,7 +138,7 @@ export default function PersistentDrawerLeft() {
         <Divider />
         <List >
           <ListItem >
-            <SwitchIdioma />
+            <LanguageSwitch />
           </ListItem>
         </List>
       </Drawer>

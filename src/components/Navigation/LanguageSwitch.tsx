@@ -41,7 +41,7 @@ const AntSwitch = withStyles((theme) => ({
   checked: {},
 }))(Switch);
 
-export default function SwitchIdioma() {
+export default function LanguageSwitch() {
   const [ingles, setIngles] = useState(true);
 
   useEffect(() => {

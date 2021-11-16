@@ -65,7 +65,7 @@ const useHomeStyles = makeStyles((theme) => ({
       fontSize: "3.6em"
     },
   },
-  knowledges: {
+  knowledge: {
     textAlign: 'center',
     [theme.breakpoints.down('sm')]: {
       fontSize: "1.2em",

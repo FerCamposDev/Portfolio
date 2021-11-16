@@ -9,7 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { Button, Grid, Hidden } from '@material-ui/core';
 
 import useWordings from '../../i18n/wordings';
-import SwitchIdioma from './SwitchIdioma';
+import LanguageSwitch from './LanguageSwitch';
 
 const drawerWidth = 240;
 
@@ -71,7 +71,7 @@ const MyAppBar = ({ open, handleDrawerOpen }: Props) => {
         </IconButton>
 
         <Grid container>
-          <Link to="/inicio" className={classes.linkButton} >
+          <Link to="/home" className={classes.linkButton} >
             <Button color='inherit'>
               {wordings.menu.home}
             </Button>
@@ -80,24 +80,24 @@ const MyAppBar = ({ open, handleDrawerOpen }: Props) => {
 
         <Hidden smDown>
           <Grid container justify="flex-end" alignItems="center">
-            <Link to="/curriculum" className={classes.linkButton} >
+            <Link to="/resume" className={classes.linkButton} >
               <Button color='inherit'>
                 {wordings.menu.resume}
               </Button>
             </Link>
-            <Link to="/proyectos" className={classes.linkButton} >
+            <Link to="/projects" className={classes.linkButton} >
               <Button color='inherit'>
                 {wordings.menu.projects}
               </Button>
             </Link>
-            <Link to="/contacto" className={classes.linkButton} >
+            <Link to="/contact" className={classes.linkButton} >
               <Button color='inherit'>
                 {wordings.menu.contact}
               </Button>
             </Link>
             <Divider orientation="vertical" flexItem className={classes.divider} />
             <Grid item>
-              <SwitchIdioma />
+              <LanguageSwitch />
             </Grid>
           </Grid>
         </Hidden>

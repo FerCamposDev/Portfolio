@@ -4,12 +4,12 @@ import useWordings from '../../i18n/wordings';
 import useProjectsStyles from './projectsStyles';
 import ProjectList from './components/ProjectList';
 
-import screenNotas from '../../images/proyectos/notas.png';
-import screenChat from '../../images/proyectos/chat.png';
-import screenCheckout from '../../images/proyectos/checkout.png'
-import screenAPIWhatsapp from '../../images/proyectos/api-whatsapp.png'
-import screenPortfolio from '../../images/proyectos/portfolio.png'
-import enConstruccion from '../../images/proyectos/construccion.png'
+import screenNotas from '../../images/projects/notas.png';
+import screenChat from '../../images/projects/chat.png';
+import screenCheckout from '../../images/projects/checkout.png'
+import screenAPIWhatsapp from '../../images/projects/api-whatsapp.png'
+import screenPortfolio from '../../images/projects/portfolio.png'
+import enConstruccion from '../../images/projects/construccion.png'
 
 const Projects = () => {
   const classes = useProjectsStyles();

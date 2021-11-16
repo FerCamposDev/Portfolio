@@ -56,7 +56,7 @@ const Contact = () => {
   };
 
   return (
-    <Container style={{ marginTop: '20px' }} className={classes.main}>
+    <Container style={{ marginTop: '20px' }} className={classes.container}>
       <Grid container direction="row" className={classes.main} justify="center">
         <Grid container item sm={6} xs={12} direction="column" alignItems="center">
           <Hidden xsDown>
@@ -78,7 +78,7 @@ const Contact = () => {
                 onClick={() => handleClick('tel:+541167070753')}
               >
                 <CallIcon fontSize="large" />
-                <Typography variant="h4">1167070753</Typography>
+                <Typography variant="h4">&nbsp;1167070753</Typography>
               </Link>
             </Tooltip>
           </Grid>
@@ -90,7 +90,7 @@ const Contact = () => {
                 }
               >
                 <WhatsAppIcon fontSize="large" />
-                <Typography variant="h4">1167070753</Typography>
+                <Typography variant="h4">&nbsp;1167070753</Typography>
               </Link>
             </Tooltip>
           </Grid>
