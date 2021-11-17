@@ -69,5 +69,10 @@ Además migramos el sitio web de wordpress del dominio .com al .net en conjunto 
     "dailyapp-desc": "Una Aplicación para llevar el control de nuestros proyectos, indicando día a día nuestros problemas y generando automaticamente los registros de nuestos días. Con autenticación y Base de datos Firebase.",
     "portfolio": "PortFolio.",
     "portfolio-desc": "Mi portafolio creado con React y Material-UI con un diseño totalmente responsive e instalable.",
-  }
+  },
+  "404": {
+    "title": "Error 404",
+    "description": "Página no encontrada.",
+    "button": "Ir al Inicio",
+  },
 };

@@ -69,5 +69,10 @@ We also migrated the wordpress website from the .com domain to the .net together
     "dailyapp-desc": "An Application to keep track of our projects, indicating our problems day by day and automatically generating the records of our days. With Authentication and Firebase Database.",
     "portfolio": "PortFolio.",
     "portfolio-desc": "My portfolio created with React and Material-UI with a fully responsive and installable design.",
-  }
+  },
+  "404": {
+    "title": "Error 404",
+    "description": "Page not found.",
+    "button": "Go to Home",
+  },
 };

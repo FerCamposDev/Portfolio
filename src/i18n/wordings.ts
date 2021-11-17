@@ -71,7 +71,12 @@ const useWordings = () => {
       dailyappDesc: t("projects.dailyapp-desc"),
       portfolio: t("projects.portfolio"),
       portfolioDesc: t("projects.portfolio-desc"),
-    }
+    },
+    page404: {
+      title: t("404.title"),
+      description: t("404.description"),
+      button: t("404.button"),
+    },
   };
 };
 

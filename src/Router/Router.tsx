@@ -5,6 +5,7 @@ import Projects from "../Pages/Projects/Projects";
 import Resume from "../Pages/Resume/Resume";
 import Contact from "../Pages/Contact/Contact";
 import Footer from "../components/Footer";
+import Page404 from "../Pages/Page404/Page404";
 
 export function Router() {
   let lang = localStorage.getItem("lang");
@@ -22,7 +23,7 @@ export function Router() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/*" element={<Page404/>} /> */}
+        <Route path="/*" element={<Page404/>} />
       </Routes>
       < Footer />
     </BrowserRouter>
