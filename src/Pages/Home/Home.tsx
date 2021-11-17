@@ -11,21 +11,18 @@ const Home = () => {
 
   return (
     <Container className={classes.root}>
-      <Grid container justifyContent="center" className={classes.main}>
-        <Grid container justifyContent="center" alignContent="flex-start">
+      <Grid className={classes.main}>
+        <Grid container item xs={12} justifyContent="center" alignContent="flex-start">
           <Typography variant="h2" className={classes.job}>
             <b>{wordings.job}</b>
           </Typography>
-
-          <Grid item xs={12}>
-            <Typography variant="h5" className={classes.knowledge}>
-              <b>HTML/CSS | Bootstrap | Material-ui | JavaScript | Typescript | React | NodeJS | Express | Firebase | Azure | Docker</b>
-            </Typography>
-          </Grid>
+          <Typography variant="h5" className={classes.knowledge}>
+            <b>HTML/CSS | Bootstrap | Material-ui | JavaScript | Typescript | React | Node | Express | Firebase | Azure | Docker</b>
+          </Typography>
         </Grid>
 
-        <Grid item className={classes.socialLinks} >
-          <a href="https://www.linkedin.com/in/fercampos/" rel="noopener noreferrer" target="_blank">
+        <Grid container justifyContent="center" className={classes.socialLinks} >
+          <a href="https://www.linkedin.com/in/fercampos" rel="noopener noreferrer" target="_blank">
             <Avatar
               alt="LinkedIn Icon"
               src={linkedin}

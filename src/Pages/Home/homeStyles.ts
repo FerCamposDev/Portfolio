@@ -8,15 +8,10 @@ const useHomeStyles = makeStyles((theme) => ({
     backgroundColor: "#ABE9F4",
   },
   socialLinks: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: "center",
     margin: 'auto',
     marginTop: theme.spacing(3),
 
     [theme.breakpoints.down('sm')]: {
-      margin: "auto",
       marginBottom: "-12px",
     },
   },
@@ -32,9 +27,11 @@ const useHomeStyles = makeStyles((theme) => ({
     height: theme.spacing(110),
     display: "flex",
     flexDirection: "column",
-    alignItems: "top",
+    justifyContent: 'center',
+    alignItems: "top", 
     color: 'black',
     padding: '1em',
+    borderRadius: '30px',
 
     [theme.breakpoints.down('sm')]: {
       backgroundImage: 'url(' + fullstackSky + ')',
