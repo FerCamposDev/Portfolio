@@ -28,7 +28,6 @@ export default function PersistentDrawerLeft() {
   const theme = useTheme();
   const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
-  let lang = "/" + localStorage.getItem("lang") || "";
 
   const handleDrawerOpen = () => {
     setOpen(true);

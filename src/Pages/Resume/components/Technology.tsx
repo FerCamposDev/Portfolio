@@ -33,7 +33,7 @@ export default function CustomizedProgressBars(props: TecnologyProps) {
 
   return (
     <div className={classes.root}>
-      <Grid container justify="center" alignItems="center">
+      <Grid container justifyContent="center" alignItems="center">
         <Grid item xs={3} >
           <p>{name}</p>
         </Grid>

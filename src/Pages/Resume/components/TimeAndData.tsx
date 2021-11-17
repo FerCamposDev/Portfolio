@@ -16,10 +16,10 @@ const TimeAndData = (props: Props) => {
 
   return (
     <>
-      <Grid sm={4} xs={12}>
+      <Grid item sm={4} xs={12}>
         <p>{time}</p>
       </Grid>
-      <Grid sm={8} xs={12}>
+      <Grid item sm={8} xs={12}>
         <h2>{title}</h2>
         <p>{desc}</p>
         {divider && <Divider className={classes.shortDivider} />}

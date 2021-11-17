@@ -14,8 +14,8 @@ const Resume = () => {
   return (
     <Paper className={classes.paper} elevation={5}>
       <Grid container>
-        <Grid container item xs={12} sm={4} className={classes.leftGrid}>
-          <Grid container item xs={12} justify="center" direction="column" alignItems="center">
+        <Grid item xs={12} sm={4} className={classes.leftGrid}>
+          <Grid container justifyContent="center" direction="column" alignItems="center">
             <Avatar
               alt="photo"
               src={profile}
@@ -25,12 +25,7 @@ const Resume = () => {
               Fernando Campos
             </Typography>
           </Grid>
-          <Grid container item xs={12}
-            justify="center"
-            direction="column"
-            alignContent="center"
-            alignItems="center"
-          >
+          <Grid container direction="column" justifyContent="center" alignItems="center">
             <Divider className={classes.divider} />
             <Typography variant="h4" className={classes.marginTopCenter}>
               {wordings.job}
@@ -68,9 +63,9 @@ const Resume = () => {
           </Grid>
         </Grid>
 
-        <Grid item xs={12} sm={8} className={classes.rightGrid} direction="column">
+        <Grid item xs={12} sm={8} className={classes.rightGrid}>
           <Typography variant="h4">{wordings.resume.education}</Typography>
-          <Grid container direction="row" alignItems="center" >
+          <Grid container alignItems="center" >
             <TimeAndData
               time={`01-03-2017 - ${wordings.resume.present}`}
               title='Universidad Nacional de La Matanza'
@@ -85,7 +80,7 @@ const Resume = () => {
           </Grid>
           <Divider className={classes.divider} />
           <Typography variant="h4" className={classes.marginTop}>{wordings.resume.work}</Typography>
-          <Grid container direction="row" alignItems="center" >
+          <Grid container alignItems="center" >
             <TimeAndData
               time={`01-06-2020 - ${wordings.resume.present}`}
               title={wordings.resume.epiDev}
@@ -114,7 +109,7 @@ const Resume = () => {
           <Typography variant="h4" className={classes.marginTop}>
             {wordings.resume.knowledge}
           </Typography>
-          <Grid sm={12} xs={12} className={classes.p}>
+          <Grid className={classes.p}>
             <p><u><b>{wordings.resume.spanish}.</b></u> {wordings.resume.spanishDesc}</p>
             <p><u><b>{wordings.resume.english}.</b></u> {wordings.resume.englishDesc}</p>
             <p><u><b>{wordings.resume.microsoftOffice}.</b></u> {wordings.resume.microsoftOfficeDesc}</p>
@@ -123,7 +118,7 @@ const Resume = () => {
           </Grid>
           <Divider className={classes.divider} />
         </Grid>
-        <Grid container justify="center" className={classes.download}>
+        <Grid container justifyContent="center" className={classes.download}>
           <a style={{ textDecoration: "none" }} href={wordings.resume.resumeLink} download="CV.pdf">
             <Button variant="contained" color="primary">
               {wordings.resume.download}

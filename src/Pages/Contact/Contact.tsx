@@ -57,7 +57,7 @@ const Contact = () => {
 
   return (
     <Container style={{ marginTop: '20px' }} className={classes.container}>
-      <Grid container direction="row" className={classes.main} justify="center">
+      <Grid container className={classes.main} justifyContent="center">
         <Grid container item sm={6} xs={12} direction="column" alignItems="center">
           <Hidden xsDown>
             <Avatar alt="Photo" variant="rounded"
@@ -67,7 +67,7 @@ const Contact = () => {
             <Typography variant="h3">Fernando Campos</Typography>
           </Hidden>
         </Grid>
-        <Grid item sm={6} xs={12} direction="column" alignItems="center">
+        <Grid item sm={6} xs={12}>
           <Typography variant="h3" style={{ paddingLeft: '30px' }}>
             {wordings.contact.title}
             <Divider className={classes.divider} />

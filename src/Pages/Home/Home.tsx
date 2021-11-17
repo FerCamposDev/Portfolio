@@ -11,13 +11,13 @@ const Home = () => {
 
   return (
     <Container className={classes.root}>
-      <Grid justify="center" className={classes.main}>
-        <Grid container item xs={12} justify="center" alignContent="flex-start">
+      <Grid container justifyContent="center" className={classes.main}>
+        <Grid container justifyContent="center" alignContent="flex-start">
           <Typography variant="h2" className={classes.job}>
             <b>{wordings.job}</b>
           </Typography>
 
-          <Grid item xs={12} justify="center">
+          <Grid item xs={12}>
             <Typography variant="h5" className={classes.knowledge}>
               <b>HTML/CSS | Bootstrap | Material-ui | JavaScript | Typescript | React | NodeJS | Express | Firebase | Azure | Docker</b>
             </Typography>

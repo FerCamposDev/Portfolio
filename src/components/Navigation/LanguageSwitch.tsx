@@ -72,7 +72,7 @@ export default function LanguageSwitch() {
   };
 
   return (
-    <Grid component="label" container justify="center" alignItems="center" spacing={1}>
+    <Grid component="label" container justifyContent="center" alignItems="center" spacing={1}>
       <Grid item>Español</Grid>
       <Grid item>
         <AntSwitch checked={ingles} onChange={handleChange} />

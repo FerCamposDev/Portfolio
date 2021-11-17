@@ -48,7 +48,7 @@ const MyAppBar = ({ open, handleDrawerOpen }: Props) => {
         </Grid>
 
         <Hidden smDown>
-          <Grid container justify="flex-end" alignItems="center">
+          <Grid container justifyContent="flex-end" alignItems="center">
             <Link to="/resume" className={classes.linkButton} >
               <Button color='inherit'>
                 {wordings.menu.resume}

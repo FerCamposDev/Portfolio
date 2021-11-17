@@ -18,11 +18,12 @@ const ProjectList = (props: Props) => {
       <Grid item xs={12} className={classes.title}>
         <Typography variant="h4" align="center">{title}</Typography>
       </Grid>
-      <Grid container xs={12} className={classes.cards}>
+      <Grid container className={classes.cards}>
         {
           projects.map(project => {
             return (
               <ProjectCard
+                key={project.title}
                 image={project.image}
                 title={project.title}
                 description={project.description}
