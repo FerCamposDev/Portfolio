@@ -31,6 +31,8 @@ const useWordings = () => {
       degree: t("resume.degree"),
       secondary: t("resume.secondary"),
       work: t("resume.work"),
+      meli:t("resume.meli"),
+      meliDesc:t("resume.meli-desc"),
       epiDev: t("resume.epi-dev"),
       epiDevDesc: t("resume.epi-dev-desc"),
       epiInfra: t("resume.epi-infra"),

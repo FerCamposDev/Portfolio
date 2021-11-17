@@ -56,7 +56,7 @@ const Resume = () => {
             <Technology name={"React"} level={70} />
             <Technology name={"Node"} level={75} />
             <Technology name={"Firebase"} level={70} />
-            <Technology name={"SQL"} level={35} />
+            <Technology name={"SQL"} level={55} />
             <Technology name={"Docker"} level={66} />
             <Technology name={"Azure"} level={70} />
             <Technology name={"C"} level={80} />
@@ -82,7 +82,13 @@ const Resume = () => {
           <Typography variant="h4" className={classes.marginTop}>{wordings.resume.work}</Typography>
           <Grid container alignItems="center" >
             <TimeAndData
-              time={`01-06-2020 - ${wordings.resume.present}`}
+              time={`05-04-2021 - ${wordings.resume.present}`}
+              title={wordings.resume.meli}
+              desc={wordings.resume.meliDesc}
+              divider={true}
+            />
+            <TimeAndData
+              time={'01-06-2020 - 02-04-2021'}
               title={wordings.resume.epiDev}
               desc={wordings.resume.epiDevDesc}
               divider={true}

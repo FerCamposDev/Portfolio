@@ -27,6 +27,8 @@ export const enTranslations = {
     "degree": "Computer Engineering.",
     "secondary": "Bachelor of Economics and Administration",
     "work": "Work Experience",
+    "meli": "Mercado Libre: FrontEnd Developer",
+    "meli-desc": "Web development with Typescript in React and Node, maintenance, updates and improvements in the Registry team.",
     "epi-dev": "Epidata: Full Stack Developer",
     "epi-dev-desc": "Web development with React, Node, Express, Java and Deployment with Docker on Azure.",
     "epi-infra": "Epidata: Infrastructure Support",
