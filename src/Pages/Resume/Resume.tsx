@@ -60,6 +60,7 @@ const Resume = () => {
             <Technology name={"Docker"} level={66} />
             <Technology name={"Azure"} level={70} />
             <Technology name={"C"} level={80} />
+            <Technology name={"Solidity"} level={55} />
           </Grid>
         </Grid>
 
