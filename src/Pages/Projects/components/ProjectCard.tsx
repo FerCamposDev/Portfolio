@@ -1,6 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -36,31 +35,29 @@ export default function ProjectCard(props: ProjectCardProps) {
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          alt={`Project-${title}`}
-          height="180"
-          image={image}
-          title={title}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {title}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      <CardMedia
+        component="img"
+        alt={`Project-${title}`}
+        height="180"
+        image={image}
+        title={title}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="h2">
+          {title}
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          {description}
+        </Typography>
+      </CardContent>
       <CardActions className={classes.links}>
         <a href={git} target="_blank" style={{ textDecoration: 'none' }} rel="noreferrer">
           <Button color='primary' variant='contained'>
             GitHub
           </Button>
         </a>
-        <a href={demo} target="_blank" style={{ textDecoration: 'none' }} rel="noreferrer">
-          <Button color='primary' variant='contained'>
+        <a href={demo ? demo : undefined} target="_blank" style={{ textDecoration: 'none' }} rel="noreferrer">
+          <Button color='primary' variant='contained' disabled={!demo}>
             {wordings.card.demo}
           </Button>
         </a>
