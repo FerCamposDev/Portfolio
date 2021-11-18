@@ -1,5 +1,6 @@
 import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
+import Typography from '@material-ui/core/Typography'
 
 import useResumeStyles from '../resumeStyles';
 
@@ -21,7 +22,9 @@ const TimeAndData = (props: Props) => {
       </Grid>
       <Grid item sm={8} xs={12}>
         <h2>{title}</h2>
-        <p>{desc}</p>
+        <Typography variant="body1" align='justify' paragraph>
+          {desc}
+        </Typography>
         {divider && <Divider className={classes.shortDivider} />}
       </Grid>
     </>

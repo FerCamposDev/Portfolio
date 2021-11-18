@@ -38,7 +38,7 @@ const Home = () => {
             </Typography>
           </a>
 
-          <a href="https://github.com/fercampos95" rel="noopener noreferrer" target="_blank">
+          <a href="https://github.com/FerCamposDev" rel="noopener noreferrer" target="_blank">
             <Avatar
               alt="Github Icon"
               src={github}
@@ -50,7 +50,7 @@ const Home = () => {
               align="center"
               className={classes.links}
             >
-              /FerCampos95
+              /FerCamposDev
             </Typography>
           </a>
         </Grid>

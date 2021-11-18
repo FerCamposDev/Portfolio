@@ -1,6 +1,6 @@
 
 export const esTranslations = {
-  "job": "Desarrollador Full Stack",
+  "job": "Desarrollador FullStack",
   "contact": {
     "title": "Contacto",
     "call": "Llámame",
@@ -21,20 +21,20 @@ export const esTranslations = {
     "contact": "Contacto",
     "phone": "Teléfono",
     "email": "Email",
-    "tecnologies": "Tecnologias",
+    "technologies": "Tecnologias",
     "present": "Actualidad",
     "education": "Educación",
     "degree": "Ingeniería en Informática",
     "secondary": "Bachiller en Economía y Administración",
     "work": "Experiencia Laboral",
     "meli": "Mercado Libre: Desarrollador FrontEnd",
-    "meli-desc": "Desarrollo web con Typescript en React y Node, mantenimiento, actualizaciones y mejoras en el equipo de Registro.",
+    "meli-desc": "Desarrollo web con Typescript en React y Node. Mantenimiento, actualizaciones y mejoras en el equipo de Registro.",
     "epi-dev": "Epidata: Desarrollador Full Stack",
-    "epi-dev-desc": "Desarrollo web con React, Node, Express, Java y Despliegue con Docker sobre Azure.",
+    "epi-dev-desc": "Desarrollo web con React, Node, Express, Java y despliegue con Docker sobre Azure.",
     "epi-infra": "Epidata: Soporte Infraestructura",
     "epi-infra-desc": `Mi labor fue llevar a cabo la migración de todos los servicios web hospedados en AWS hacia Azure, reduciendo el costo de la compañia en ese sector un 100% durante un año y medio debido a que contaban con un patrocinio de Microsoft que no utilizaban.
-Migramos los servidores Redmine, CRM, SitioWeb(Wordpress) y Jenkins/SonarQube.
-Además migramos el sitio web de wordpress del dominio .com al .net en conjunto al email empresarial.`,
+Migramos los servidores Redmine, CRM, SitioWeb (Wordpress) y Jenkins / SonarQube.
+Además migramos el sitio web de wordpress del dominio .com al .net en conjunto con el email empresarial.`,
     "el-progreso": "Emprendimiento Personal: Centro Educacional El Progreso",
     "el-progreso-desc": "Me encargaba de realizar ventas de libros y enciclopedias en colegios, entregar y cobrar el material mensualmente.",
     "blancos-line": "Emprendimiento Personal: Blancos Line",

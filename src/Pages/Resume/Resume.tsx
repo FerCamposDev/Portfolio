@@ -27,26 +27,26 @@ const Resume = () => {
           </Grid>
           <Grid container direction="column" justifyContent="center" alignItems="center">
             <Divider className={classes.divider} />
-            <Typography variant="h4" className={classes.marginTopCenter}>
+            <Typography variant="h4" className={classes.marginTopCenter} paragraph>
               {wordings.job}
             </Typography>
-            <p>
+            <Typography variant="body1" align='justify' paragraph>
               {wordings.resume.profile}
-            </p>
+            </Typography>
             <Divider className={classes.divider} />
             <Typography variant="h6" className={classes.marginTopCenter}>
               {wordings.resume.location}
             </Typography>
-            <p style={{ textAlign: "center" }}>González Catán, La Matanza, Bs As, Argentina.</p>
+            <p style={{ textAlign: "center" }}>La Matanza, Buenos Aires, Argentina.</p>
             <Typography variant="h6" className={classes.marginTop}>
               {wordings.resume.contact}
             </Typography>
             <p><b>{wordings.resume.phone}: </b> +54 11-6707-0753<br></br>
-              <b>{wordings.resume.email}: </b> fer_eze_jose @hotmail.com</p>
+              <b>{wordings.resume.email}: </b> fer_eze_jose@hotmail.com</p>
             <Divider className={classes.divider} />
           </Grid>
           <Grid item xs={12}>
-            <Typography variant="h6" className={classes.marginTopCenter}>
+            <Typography variant="h6" className={classes.marginTopCenter} paragraph>
               {wordings.resume.technologies}
             </Typography>
             <Technology name={"Javascript"} level={94} />

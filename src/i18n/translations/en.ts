@@ -1,6 +1,6 @@
 
 export const enTranslations = {
-  "job": "Full Stack Developer",
+  "job": "FullStack Developer",
   "contact": {
     "title": "Contact",
     "call": "Giving me a call",
@@ -28,12 +28,12 @@ export const enTranslations = {
     "secondary": "Bachelor of Economics and Administration",
     "work": "Work Experience",
     "meli": "Mercado Libre: FrontEnd Developer",
-    "meli-desc": "Web development with Typescript in React and Node, maintenance, updates and improvements in the Registry team.",
+    "meli-desc": "Web development with Typescript in React and Node. Maintenance, updates and improvements in the Registry team.",
     "epi-dev": "Epidata: Full Stack Developer",
-    "epi-dev-desc": "Web development with React, Node, Express, Java and Deployment with Docker on Azure.",
+    "epi-dev-desc": "Web development with React, Node, Express, Java and deployment with Docker on Azure.",
     "epi-infra": "Epidata: Infrastructure Support",
     "epi-infra-desc": `My job was to carry out the migration of all web services hosted on AWS to Azure, reducing the cost of the company in that sector by 100% for a year and a half due to the fact that they had a Microsoft sponsorship that they did not use.
-We migrated the Redmine, CRM, SitioWeb (Wordpress) and Jenkins / SonarQube servers.
+We migrated the Redmine, CRM, Website (Wordpress) and Jenkins / SonarQube servers.
 We also migrated the wordpress website from the .com domain to the .net together with the business email.`,
     "el-progreso": "Personal Entrepreneurship: Centro Educacional El Progreso",
     "el-progreso-desc": "I was in charge of selling books and encyclopedias in schools, delivering and collecting monthly fees.",
