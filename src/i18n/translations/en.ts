@@ -51,7 +51,7 @@ We also migrated the wordpress website from the .com domain to the .net together
     "mp": "Mercado-Pago certification",
     "mp-desc": "Certification on collections with Checkout-Pro.",
     "download": "Download Resume PDF",
-    "resume-link": "https://drive.google.com/u/0/uc?id=1fqMUCJjHmZZzsCKRqSr1u7OSM0V-Of40&export=download"
+    "resume-link": "https://drive.google.com/uc?id=1LKRDAR0irIbV-WazYFx6TgIex-sEbnYy&export=download"
   },
   "card": {
     "demo": "Demo"

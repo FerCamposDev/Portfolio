@@ -4,7 +4,7 @@ function App() {
   return (
     <div style={{
       backgroundColor: "#ABE9F4",
-      paddingBottom: '10vh',
+      paddingBottom: '15vh',
       minHeight: '100vh',
     }}>
       <Router/>

@@ -51,7 +51,7 @@ Además migramos el sitio web de wordpress del dominio .com al .net en conjunto 
     "mp": "Certificación MercadoPago",
     "mp-desc": "Certificación sobre cobros con Checkout Pro.",
     "download": "Descargar Curriculum PDF",
-    "resume-link": "https://drive.google.com/u/0/uc?id=1U3n0i5tbzt0lzH-2LSFBI6SmFoFiMaus&export=download",
+    "resume-link": "https://drive.google.com/uc?id=1GiGRi3PpKqYGjcIRXnDOrRfCk_9LLJls&export=download",
   },
   "card": {
     "demo": "Demo"
