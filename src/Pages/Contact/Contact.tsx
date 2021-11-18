@@ -56,7 +56,7 @@ const Contact = () => {
   };
 
   return (
-    <Container style={{ marginTop: '20px' }} className={classes.container}>
+    <Container style={{ marginTop: '20px' }}>
       <Grid container className={classes.main} justifyContent="center">
         <Grid container item sm={6} xs={12} direction="column" alignItems="center">
           <Hidden xsDown>
@@ -68,7 +68,7 @@ const Contact = () => {
           </Hidden>
         </Grid>
         <Grid item sm={6} xs={12}>
-          <Typography variant="h3" style={{ paddingLeft: '30px' }}>
+          <Typography variant="h3" className={classes.title}>
             {wordings.contact.title}
             <Divider className={classes.divider} />
           </Typography>

@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.grey[300],
     marginTop: theme.spacing(2),
     padding: theme.spacing(2, 0),
+    width: '100%',
+    position: 'fixed',
+    bottom: 0,
   },
 }));
 

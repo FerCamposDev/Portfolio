@@ -10,7 +10,7 @@ const Home = () => {
   const wordings = useWordings();
 
   return (
-    <Container className={classes.root}>
+    <Container>
       <Grid className={classes.main}>
         <Grid container item xs={12} justifyContent="center" alignContent="flex-start">
           <Typography variant="h2" className={classes.job}>

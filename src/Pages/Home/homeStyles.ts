@@ -4,9 +4,6 @@ import fullstack from '../../images/fullstack.jpg';
 import fullstackSky from '../../images/fullstack-sky.png';
 
 const useHomeStyles = makeStyles((theme) => ({
-  root: {
-    backgroundColor: "#ABE9F4",
-  },
   socialLinks: {
     margin: 'auto',
     marginTop: theme.spacing(3),

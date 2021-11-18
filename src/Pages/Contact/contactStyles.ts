@@ -1,9 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 
 const useContactStyles = makeStyles((theme) => ({
-  container: {
-    minHeight: '70vh',
-  },
   main: {
     borderRadius: '20px',
     padding: '4em',
@@ -25,6 +22,14 @@ const useContactStyles = makeStyles((theme) => ({
     width: '35%',
     [theme.breakpoints.down('sm')]: {
       width: '90%',
+    }
+  },
+  title: {
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'center',
+      display:'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
     }
   }
 }));

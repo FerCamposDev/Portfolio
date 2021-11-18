@@ -22,9 +22,7 @@ const Page404 = () => {
   }
 
   return (
-    <Grid container direction='column' justifyContent='space-around' alignItems='center'
-      style={{minHeight: '70vh'}}
-    >
+    <Grid container direction='column' justifyContent='space-around' alignItems='center'>
       <Typography variant="h2">
         <b>{wordings.page404.title}</b>
       </Typography>
@@ -39,11 +37,11 @@ const Page404 = () => {
       <Button variant='contained'
         onMouseOver={handleOver}
         onMouseLeave={handleLeave}
-        onClick={()=> navigate('/home')}
+        onClick={() => navigate('/home')}
       >
         {wordings.page404.button}
       </Button>
-    </Grid>
+    </Grid >
   )
 }
 
