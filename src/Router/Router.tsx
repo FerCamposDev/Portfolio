@@ -17,12 +17,12 @@ export function Router() {
   return (
     <BrowserRouter basename={lang} >
       <Drawer />
-      < Routes >
+      <Routes>
         <Route path='/home' element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/*" element={<Page404/>} />
+        <Route path="/*" element={<Page404 />} />
       </Routes>
     </BrowserRouter>
   );

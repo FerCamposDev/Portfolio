@@ -33,6 +33,7 @@ const Resume = () => {
             <Typography variant="body1" align='justify' paragraph>
               {wordings.resume.profile}
             </Typography>
+            <br />
             <Divider className={classes.divider} />
             <Typography variant="h6" className={classes.marginTopCenter}>
               {wordings.resume.location}
@@ -43,6 +44,7 @@ const Resume = () => {
             </Typography>
             <p><b>{wordings.resume.phone}: </b> +54 11-6707-0753<br></br>
               <b>{wordings.resume.email}: </b> fer_eze_jose@hotmail.com</p>
+            <br />
             <Divider className={classes.divider} />
           </Grid>
           <Grid item xs={12}>
@@ -52,15 +54,15 @@ const Resume = () => {
             <Technology name={"Javascript"} level={94} />
             <Technology name={"Typescript"} level={80} />
             <Technology name={"Java"} level={60} />
+            <Technology name={"C"} level={80} />
+            <Technology name={"Solidity"} level={55} />
             <Technology name={"HTML/CSS"} level={75} />
-            <Technology name={"React"} level={70} />
+            <Technology name={"React"} level={95} />
             <Technology name={"Node"} level={75} />
             <Technology name={"Firebase"} level={70} />
             <Technology name={"SQL"} level={55} />
             <Technology name={"Docker"} level={66} />
             <Technology name={"Azure"} level={70} />
-            <Technology name={"C"} level={80} />
-            <Technology name={"Solidity"} level={55} />
           </Grid>
         </Grid>
 
@@ -68,7 +70,7 @@ const Resume = () => {
           <Typography variant="h4">{wordings.resume.education}</Typography>
           <Grid container alignItems="center" >
             <TimeAndData
-              time={`01-03-2017 - ${wordings.resume.present}`}
+              time={`01-03-2017 - 31-07-2021`}
               title='Universidad Nacional de La Matanza'
               desc={wordings.resume.degree}
               divider={true}
@@ -83,7 +85,19 @@ const Resume = () => {
           <Typography variant="h4" className={classes.marginTop}>{wordings.resume.work}</Typography>
           <Grid container alignItems="center" >
             <TimeAndData
-              time={`05-04-2021 - ${wordings.resume.present}`}
+              time={`04-04-2022 - ${wordings.resume.present}`}
+              title={wordings.resume.rather}
+              desc={wordings.resume.ratherDesc}
+              divider={true}
+            />
+            <TimeAndData
+              time={`01-11-2021 - 31-03-2022`}
+              title={wordings.resume.tvc}
+              desc={wordings.resume.tvcDesc}
+              divider={true}
+            />
+            <TimeAndData
+              time={`01-04-2021 - 01-04-2022`}
               title={wordings.resume.meli}
               desc={wordings.resume.meliDesc}
               divider={true}
@@ -101,15 +115,9 @@ const Resume = () => {
               divider={true}
             />
             <TimeAndData
-              time={'2013 - 2016 / 2019-2020'}
+              time={'2013 - 2020'}
               title={wordings.resume.elProgreso}
               desc={wordings.resume.elProgresoDesc}
-              divider={true}
-            />
-            <TimeAndData
-              time={'2016 - 2019'}
-              title={wordings.resume.blancosLine}
-              desc={wordings.resume.blancosLineDesc}
             />
           </Grid>
           <Divider className={classes.divider} />
