@@ -33,6 +33,7 @@ const Resume = () => {
             <Typography variant="body1" align='justify' paragraph>
               {wordings.resume.profile}
             </Typography>
+            <br />
             <Divider className={classes.divider} />
             <Typography variant="h6" className={classes.marginTopCenter}>
               {wordings.resume.location}
@@ -43,6 +44,7 @@ const Resume = () => {
             </Typography>
             <p><b>{wordings.resume.phone}: </b> +54 11-6707-0753<br></br>
               <b>{wordings.resume.email}: </b> fer_eze_jose@hotmail.com</p>
+            <br />
             <Divider className={classes.divider} />
           </Grid>
           <Grid item xs={12}>

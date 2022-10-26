@@ -2,14 +2,14 @@ import { makeStyles } from "@material-ui/core";
 
 const useResumeStyles = makeStyles((theme) => ({
   photo: {
-    width: theme.spacing(30),
-    height: theme.spacing(30),
+    width: theme.spacing(45),
+    height: theme.spacing(45),
   },
   marginTop: {
     marginTop: '10px',
   },
   marginTopCenter: {
-    marginTop: '10px',
+    marginTop: '20px',
     textAlign: "center",
   },
   leftGrid: {
