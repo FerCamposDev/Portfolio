@@ -1,6 +1,6 @@
 
 export const esTranslations = {
-  "job": "Desarrollador FullStack",
+  "job": "Desarrollador Frontend",
   "contact": {
     "title": "Contacto",
     "call": "Llámame",
@@ -16,7 +16,7 @@ export const esTranslations = {
     "contact": "Contacto",
   },
   "resume": {
-    "profile": "Soy estudiante de la carrera de Ingeniería en Informática de la UNLaM. Actualmente me encuentro cursando el segundo año de la carrera. Me dedico especialmente al desarrollo web con React y Node.js aunque también tengo conocimientos en otras tecnologías y en el área de infraestructura trabajando con Microsoft Azure.",
+    "profile": "Soy un profesional en desarrollo web frontend, especializado en React y Node.js, con conocimientos en otras tecnologías y en infraestructura con Microsoft Azure. Soy autodidacta y emprendedor, con experiencia en negocios desde temprana edad. También tengo estudios en Ingeniería en Informática hasta el tercer año en la UNLaM.",
     "location": "Localidad",
     "contact": "Contacto",
     "phone": "Teléfono",
